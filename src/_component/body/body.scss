@@ -4,7 +4,7 @@
     padding: 15px;
   }  
   
-  ul.uncompletet_tasks {
+  ul.uncompleted_tasks {
     width: 100%;
   }
   
@@ -70,7 +70,7 @@
   
   ul.completed_tasks:before {
     content: '';
-    width: 268px;
+    width: 92%;
     height: 2px;
     background: #d8e5e0;
     position: absolute;

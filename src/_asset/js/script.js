@@ -3,7 +3,7 @@ const addItemButton = document.querySelector('button.addItemButton');
 
 addItemInput.addEventListener('keydown', function (e) {
   var value = this.value;
-  let ul = document.querySelector('ul.uncompletet_tasks');  
+  let ul = document.querySelector('ul.uncompleted_tasks');  
   var li = document.createElement('li');
   if (e.code === 'Enter' && value) {
     if(addItemInput.value){
@@ -13,10 +13,15 @@ addItemInput.addEventListener('keydown', function (e) {
 });
 
 
-addItemButton.addEventListener('click', addItem)
+addItemButton.addEventListener('click', addItem, showLine);
+
+function showLine(){
+  let line = document.querySelector('hr');
+  line.style.display = 'block';
+}
 
 function addItem(){ 
-  let ul = document.querySelector('ul.uncompletet_tasks');  
+  let ul = document.querySelector('ul.uncompleted_tasks');  
   var li = document.createElement('li');
   if(addItemInput.value===''){
     addItemInput.value='';
@@ -56,17 +61,17 @@ function addItem(){
 	let parent = item.parentNode;
 	let id = parent.className;
  
-  if(id === 'uncompletet_tasks'){
+  if(id === 'uncompleted_tasks'){
     id='completed_tasks';
   }
   else{
-    id='uncompletet_tasks';
+    id='uncompleted_tasks';
   }
 
 	// Check if the item should be added to the completed list or to re-added to the todo list
-	let target = (id === 'uncompletet_tasks') ? document.querySelector('.uncompletet_tasks'):document.querySelector('.completed_tasks');
+	let target = (id === 'uncompleted_tasks') ? document.querySelector('.uncompleted_tasks'):document.querySelector('.completed_tasks');
   console.log(item);
   parent.removeChild(item);
 	target.insertBefore(item, target.childNodes[0]);
 }
-  
+ 

@@ -4,13 +4,12 @@ html
         title JavaScript To do list
         link(rel="stylesheet", href="style.css")
     
-    body
-         
+    body        
         .add_task         
             input(type="text", placeholder="Enter an activity.." , class="addItemInput" )
             button.addItemButton +
         .added_tasks
-            ul#ulstyle.uncompletet_tasks
+            ul#ulstyle.uncompleted_tasks
             ul#ulstyle.completed_tasks
         script
             include _asset/js/script.js
