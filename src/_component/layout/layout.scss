@@ -31,12 +31,50 @@
 
 
 
-@media only screen and (max-width: 1000px) {
+
   html, body {
       transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
       width: 100%;
   }
   .add_task{
     width: 100%;
+    height: 190px;
   }
+  input{
+    width: 98%;
+    height: 150px;
+    border-radius: 20px 20px;
+    font-size: 60px;
+  }
+  .addItemButton{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    right: 0;
+    font-size: 100px;
+  }
+  .added_tasks{
+    margin-top: 200px;
+  }
+  ul#ulstyle li{
+    min-height: 100px;
+    font-size: 55px;
+    line-height: 60px;
+    margin: 0 0 50px 0;
+    padding: 14px 220px 14px 14px;
+  }
+  
+
+ul#ulstyle li .buttons{
+    width: 240px;
+    height: 70px;
+    top: 7px;
+  }
+  
+
+ul#ulstyle li .buttons button{
+width: 120px;
+font-size: 78px;
 }
+
+
